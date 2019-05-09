@@ -1,0 +1,36 @@
+header {
+width: 60%;
+color: black;
+text-align: center;
+margin: 0 auto;
+}
+
+#top,
+#result,
+.questionText {
+    width: 40%;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.questionText,
+.choices {
+    border: 1px solid black;
+}
+
+.choices {
+    width: 40%;
+    color: black;
+    font-size: 15px;
+    margin: 0 auto;
+    padding-left: 120px;
+}
+
+#choiceA:hover,
+#choiceB:hover,
+#choiceC:hover,
+#choiceD:hover {
+    background: #888;
+}
