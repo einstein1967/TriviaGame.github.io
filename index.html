@@ -13,26 +13,33 @@
 
 </head>
 
-<body class="container" background="#">
+<body class="container" background="assets/images/images.jpg">
     <script src="assets/javascript/app.js"></script>
 
+    <div class="main">
     <header>
         <h2>Totally Trivial Trivia</h2>
     </header>
     <br><br><br><br>
-    <div id="top">
-        <div>Current score: <span id="currentScore"></span></div><br>
-        <div>Points Available: <span id="pointsAvailable"></span></div><br>
-        <div><span id="result"></span></div>
-    </div>
-    <br><br>
-    <div class="questionText">Question: <span id="question"></span></div>
-    <br><br>
-    <div class="choices">
-        <div>A. <span id="choiceA"></span></div>
-        <div>B. <span id="choiceB"></span></div>
-        <div>C. <span id="choiceC"></span></div>
-        <div>D. <span id="choiceD"></span></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="top">
+                    <div>Current score: <span id="currentScore"></span></div><br>
+                    <div>Points Available: <span id="pointsAvailable"></span></div><br>
+                    <div><span id="result"></span></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="questionText">Question<span id="question"></span></div>
+                <br><br>
+                <div class="choices">
+                    <div>A. <span id="choiceA"></span></div>
+                    <div>B. <span id="choiceB"></span></div>
+                    <div>C. <span id="choiceC"></span></div>
+                    <div>D. <span id="choiceD"></span></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

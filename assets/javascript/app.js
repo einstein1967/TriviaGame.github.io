@@ -82,7 +82,7 @@ $(document).ready(function () {
         randomPop.splice(temp, 1);
 
         //displays question and choices
-        $("#question").text(question);
+        $("#question").text(" " + (nextQuestion + 1) + ": " + question);
         $("#choiceA").text(randomA);
         $("#choiceB").text(randomB);
         $("#choiceC").text(randomC);
@@ -93,14 +93,14 @@ $(document).ready(function () {
         setTimeout(run, 3000);
     }
 
-
+    grid();
 
     //controls countdown and accepts/processes user clicks
     function run() {
         stop();
         intervalId = setInterval(decrement, 1000);
 
-        $("#choiceA").click(function () {
+        $("#choiceA").unbind().click(function () {
             if (randomA === correctAnswer) {
                 console.log(correctAnswer)
                 rightAnswer();
@@ -109,7 +109,7 @@ $(document).ready(function () {
             }
         });
 
-        $("#choiceB").click(function () {
+        $("#choiceB").unbind().click(function () {
             if (randomB === correctAnswer) {
                 rightAnswer();
             } else {
@@ -117,7 +117,7 @@ $(document).ready(function () {
             }
         });
 
-        $("#choiceC").click(function () {
+        $("#choiceC").unbind().click(function () {
             if (randomC === correctAnswer) {
                 rightAnswer();
             } else {
@@ -125,7 +125,7 @@ $(document).ready(function () {
             }
         });
 
-        $("#choiceD").click(function () {
+        $("#choiceD").unbind().click(function () {
             if (randomD === correctAnswer) {
                 rightAnswer();
             } else {
@@ -152,24 +152,19 @@ $(document).ready(function () {
     }
 
     //displays correct/incorrect and restarts the question function
-    var right = 0;
     var rightAnswer = function () {
         right++;
         console.log("right: " + right);
         $("#result").text("Correct");
         currentScore += pointsAvailable;
-        $('#currentScore').text(currentScore);
-        // console.log("Current score " + currentScore);
         nextQuestion++;
-        grid();
-    }   
-
+        setTimeout(grid, 2000);
+    }
     var wrongAnswer = function () {
         wrong++;
         console.log("wrong: " + wrong);
         $("#result").text("Incorrect");
         nextQuestion++;
-        grid();
+        setTimeout(grid, 2000);
     }
-    grid();
 });

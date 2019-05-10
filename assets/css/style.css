@@ -1,31 +1,48 @@
 header {
-width: 60%;
-color: black;
-text-align: center;
-margin: 0 auto;
+    width: 60%;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main {
+    width: 50%;
+    margin: 0 auto;
+    background: rgb(204, 151, 151);
 }
 
 #top,
 #result,
 .questionText {
-    width: 40%;
-    color: black;
+    color: white;
     font-size: 15px;
     text-align: center;
     margin: 0 auto;
 }
 
+#top {
+    height: 448px;
+    border: 1px black solid;
+    margin: 0 5px 5px 5px;
+    padding-top: 100px;
+}
+
 .questionText,
 .choices {
     border: 1px solid black;
+    height: 200px;
+    margin-right: 5px;
+}
+
+.questionText {
+    padding: 10px 20px 0 20px;
 }
 
 .choices {
-    width: 40%;
-    color: black;
+    color: white;
     font-size: 15px;
-    margin: 0 auto;
-    padding-left: 120px;
+    padding: 10px 0 5px 20px;
+    margin-bottom: 5px;
 }
 
 #choiceA:hover,
