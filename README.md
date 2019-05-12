@@ -1,6 +1,3 @@
 # TriviaGame.github.io
 
-1. layout: box within a box
-2. timer
-3. find questions/answers
-4. 
+This is a classic trivia game. You'll score points based on the amount left on the timer. There are 20 science based questions.
